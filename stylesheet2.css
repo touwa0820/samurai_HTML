@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 body {
 	margin: 0;
 	padding: 0;
@@ -9,12 +11,12 @@ body {
 
 /* -------------------- wrapper -------------------- */
 #wrapper {
-    width: 100%;
-    margin: auto;
-    padding: 0px;
-    border: 0px;
-    background-color: #FFF;	
-    top: 10px;
+	width: 100%;
+	margin: auto;
+	padding: 0px;
+	border: 0px;
+	background-color: #FFF;	
+	top: 10px;
 }
 
 /* -------------------- header -------------------- */
@@ -47,12 +49,12 @@ body {
 	width: 100%;
 }
 #nav ul {
+	display: flex;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 #nav ul li {
-	float: left;
 	width: 20%;
 	text-align: center;
 }
@@ -66,6 +68,11 @@ body {
 	text-decoration: none;
 	background-color: green;
 }
+
+#nav ul li a:hover {
+	filter: drop-shadow(10px 10px 10px black);
+}
+
 /* -------------------- container -------------------- */
 #container {
 	width: 100%;
@@ -73,11 +80,12 @@ body {
 	padding: auto;
 	padding-top: 20px;
 	clear: both;
+	display: grid;
+	grid-template-columns: 70vw 30vw;
 }
 /* -------------------- main -------------------- */
 #main {
-	float: left;
-	width: 60%;
+	width: 95%;
 	padding: 10px 30px 10px 10px;
 }
 #main h2 {
@@ -126,8 +134,7 @@ body {
 
 /* -------------------- side -------------------- */
 #side {
-	float: right;
-	width: 30%;
+	width: 85%;
 	padding: 20px;
 	background-color: #F99;
 }
@@ -161,4 +168,11 @@ body {
 	padding: 8px 0 8px 4px;
 	list-style: none;
 	border-bottom: solid 1px #C36;
+}
+
+#side .box .boxBody ul li:hover {
+	padding: 8px 0 8px 4px;
+	list-style: none;
+	border-bottom: solid 1px #C36;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
